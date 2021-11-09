@@ -10,7 +10,9 @@ Similarly, we can also get b1a1b2a2.... as above.
 
 We can also start weaving from the end. By weaving from the end, we can form the words: anbnb(n-1)a(n-1)... , bnanb(n-1)a(n-1)...
 
-Thus, by weaving A and B, four new numbers are formed: weaving from the beginning, starting with A, weaving from the beginning, starting with B, weaving from the end, starting with A, weaving from the end, starting with B. While weaving two numbers A and B, if all the digits of A are weaved and some more digits are there in B, the remaining digits of B are just appended at the end. For example, if A = 27 and B = 54 then there are four numbers that can be woven
+Thus, by weaving A and B, four new numbers are formed: weaving from the beginning, starting with A, weaving from the beginning, starting with B, weaving from the end, 
+starting with A, weaving from the end, starting with B. While weaving two numbers A and B, if all the digits of A are weaved and some more digits are there in B, 
+the remaining digits of B are just appended at the end. For example, if A = 27 and B = 54 then there are four numbers that can be woven
 
 2574
 
