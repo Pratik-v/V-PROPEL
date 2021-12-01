@@ -101,29 +101,22 @@ no
 
 yes'''
 
-def f1(x):
+def f1(x,c):
+    if(c+1>=4):
+        return
     for i in XY:
         if(i[0]==x):
-            X.append(i)
-            f1(i[1])
+            X.append(i[1])
+            f1(i[1],c+1)
 N,M=int(input()),int(input()) #number of people,number of connections
 XY=[list(map(int,input().split())) for i in range(M)] #connections
 K,Q=int(input()),int(input()) #person who wants to send connection requests,number of queries
 L=[int(input()) for i in range(Q)] #queries
 X=[]
-f1(K)
-for y in range(len(L)):
-    for i in range(len(X)):
-        if(X[i][0]==K):
-            c=i
-        if(X[i][1]==L[y]):
-            if(i-c<4):
-                L[y]='yes'
-            else:
-                L[y]='no'
-for i in L:
-    if(i=='yes'):
-        print(i)
+f1(K,0)
+for y in L:
+    if(y in X):
+        print('yes')
     else:
         print('no')
         
