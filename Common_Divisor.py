@@ -25,17 +25,14 @@ YES'''
 
 #CODE
 def f(f1):
-    l=[]
     for i in range(2,f1+1):
         if(f1%i==0):
-            l.append(i)
-    return l
+            k.append(i)
 n=int(input())
 m=list(map(int,input().split()))
 k=[]
 for i in m:
-    for j in f(i):
-        k.append(j)
+    f(i)
 for i in k:
     if(k.count(i)==n):
         exit(print("YES"))
