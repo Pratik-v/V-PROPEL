@@ -24,3 +24,26 @@ Next ‘n’ lines contain the number of doubts each student needs to clarify
 Output Format
 
 Print the time taken for each student to clarify his doubts and leave the queue
+
+n=int(input())
+d=[int(input()) for i in range(n)]
+t=int(input())
+l=[0 for i in range(n)]
+k=0
+zipped_lists = zip(d.copy(),l)
+while(d!=[]):
+    i=d.pop(0)
+    if(i>t):
+        d.append(i-t)
+        l[k]+=t
+    elif(i<=t):
+        l[k]+=i
+        k+=1
+
+for i in range(1,len(l)):
+    l[i]+=l[i-1]
+
+
+sorted_zipped_lists = sorted(zipped_lists)
+l = [element for _, element in sorted_zipped_lists]
+print(*l,sep="\n")
